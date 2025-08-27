@@ -24,7 +24,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
     # Open Google search URL
-    url = "https://www.google.com/search?tbm=lcl&q=construction+firms+in+gauteng"
+    url = "https://www.google.com/search?tbm=lcl&q=estates+in+gauteng"
     print("Navigating to Google search...")
     driver.get(url)
 
@@ -40,133 +40,194 @@ try:
     except:
         print("No cookie consent button found")
     
-    # Scroll to load more results
-    print("Scrolling to load more results...")
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    scroll_attempts = 0
-    
-    while scroll_attempts < 5:  # Limit to 5 scroll attempts
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(3)
-        
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
-        scroll_attempts += 1
-
-    # Find all business listings
-    print("Looking for business listings...")
-    
-    # Try different selectors for business cards
-    business_selectors = [
-        "//div[contains(@class, 'rllt__details')]",
-        "//div[contains(@class, 'VkpGBb')]",
-        "//div[@class='rllt__details']",
-        "//div[@class='VkpGBb']",
-        "//div[contains(@class, 'section-result')]"
-    ]
-    
-    businesses = []
-    
-    for selector in business_selectors:
-        try:
-            businesses = driver.find_elements(By.XPATH, selector)
-            if businesses:
-                print(f"Found {len(businesses)} businesses using selector: {selector}")
-                break
-        except:
-            continue
-    
-    if not businesses:
-        print("No business listings found with standard selectors. Trying fallback...")
-        # Try to find any div that might contain business info
-        businesses = driver.find_elements(By.XPATH, "//div[.//h3]")
-        print(f"Found {len(businesses)} potential business elements")
-    
     construction_firms = []
+    max_pages = 10  # Number of pages to scrape
+    current_page = 1
     
-    for i, business in enumerate(businesses):
-        try:
-            # Extract business name
-            name = "Unknown"
-            try:
-                name_elements = business.find_elements(By.XPATH, ".//h3 | .//div[contains(@class, 'title')] | .//span[contains(@class, 'title')]")
-                if name_elements:
-                    name = name_elements[0].text.strip()
-            except:
-                pass
+    while current_page <= max_pages:
+        print(f"Processing page {current_page} of {max_pages}...")
+        
+        # Scroll to load more results on current page
+        print("Scrolling to load more results...")
+        last_height = driver.execute_script("return document.body.scrollHeight")
+        scroll_attempts = 0
+        
+        while scroll_attempts < 3:  # Limit to 3 scroll attempts per page
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(2)
             
-            # Extract address
-            address = "Not available"
+            new_height = driver.execute_script("return document.body.scrollHeight")
+            if new_height == last_height:
+                break
+            last_height = new_height
+            scroll_attempts += 1
+
+        # Find all business listings
+        print("Looking for business listings...")
+        
+        # Try different selectors for business cards
+        business_selectors = [
+            "//div[contains(@class, 'rllt__details')]",
+            "//div[contains(@class, 'VkpGBb')]",
+            "//div[@class='rllt__details']",
+            "//div[@class='VkpGBb']",
+            "//div[contains(@class, 'section-result')]"
+        ]
+        
+        businesses = []
+        
+        for selector in business_selectors:
             try:
-                address_elements = business.find_elements(By.XPATH, ".//span[contains(@class, 'address')] | .//div[contains(@class, 'address')] | .//span[contains(text(), 'South Africa')]")
-                if address_elements:
-                    address = address_elements[0].text.strip()
+                businesses = driver.find_elements(By.XPATH, selector)
+                if businesses:
+                    print(f"Found {len(businesses)} businesses using selector: {selector}")
+                    break
             except:
-                pass
-            
-            # Extract phone number using multiple strategies
-            phone = "Not available"
+                continue
+        
+        if not businesses:
+            print("No business listings found with standard selectors. Trying fallback...")
+            # Try to find any div that might contain business info
+            businesses = driver.find_elements(By.XPATH, "//div[.//h3]")
+            print(f"Found {len(businesses)} potential business elements")
+        
+        # Process businesses on current page
+        for i, business in enumerate(businesses):
             try:
-                # Look for phone numbers in the text
-                full_text = business.text
-                phone_patterns = [
-                    r'(\+27\s?\d{2}\s?\d{3}\s?\d{4})',  # South Africa format +27
-                    r'(\(\d{3}\)\s?\d{3}-\d{4})',       # US format (123) 456-7890
-                    r'(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4})',  # Standard phone
-                    r'(\d{3}\s\d{3}\s\d{4})',           # 123 456 7890
+                # Extract business name
+                name = "Unknown"
+                try:
+                    name_elements = business.find_elements(By.XPATH, ".//h3 | .//div[contains(@class, 'title')] | .//span[contains(@class, 'title')]")
+                    if name_elements:
+                        name = name_elements[0].text.strip()
+                except:
+                    pass
+                
+                # Extract address
+                address = "Not available"
+                try:
+                    address_elements = business.find_elements(By.XPATH, ".//span[contains(@class, 'address')] | .//div[contains(@class, 'address')] | .//span[contains(text(), 'South Africa')]")
+                    if address_elements:
+                        address = address_elements[0].text.strip()
+                except:
+                    pass
+                
+                # Extract phone number using multiple strategies
+                phone = "Not available"
+                try:
+                    # Look for phone numbers in the text
+                    full_text = business.text
+                    phone_patterns = [
+                        r'(\+27\s?\d{2}\s?\d{3}\s?\d{4})',  # South Africa format +27
+                        r'(\(\d{3}\)\s?\d{3}-\d{4})',       # US format (123) 456-7890
+                        r'(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4})',  # Standard phone
+                        r'(\d{3}\s\d{3}\s\d{4})',           # 123 456 7890
+                    ]
+                    
+                    for pattern in phone_patterns:
+                        matches = re.findall(pattern, full_text)
+                        if matches:
+                            phone = matches[0]
+                            break
+                except:
+                    pass
+                
+                # Extract rating if available
+                rating = "Not rated"
+                try:
+                    rating_elements = business.find_elements(By.XPATH, ".//span[contains(@class, 'rating')] | .//div[contains(@class, 'rating')]")
+                    if rating_elements:
+                        rating = rating_elements[0].text.strip()
+                except:
+                    pass
+                
+                # Extract website if available
+                website = "Not available"
+                try:
+                    website_elements = business.find_elements(By.XPATH, ".//a[contains(@href, 'http')]")
+                    if website_elements:
+                        for element in website_elements:
+                            href = element.get_attribute('href')
+                            if href and ('google.com' not in href and 'maps.google.com' not in href):
+                                website = href
+                                break
+                except:
+                    pass
+                
+                construction_firms.append({
+                    'Name': name,
+                    'Address': address,
+                    'Phone': phone,
+                    'Rating': rating,
+                    'Website': website,
+                    'Page': current_page
+                })
+                
+                print(f"Processed business {i+1} on page {current_page}: {name}")
+                
+            except Exception as e:
+                print(f"Error processing business {i+1} on page {current_page}: {str(e)}")
+                continue
+        
+        # Try to navigate to next page
+        if current_page < max_pages:
+            try:
+                print("Looking for next page button...")
+                
+                # Try different selectors for the next button
+                next_button_selectors = [
+                    "//span[contains(text(), 'Next')]/ancestor::a",
+                    "//a[@aria-label='Next page']",
+                    "//a[contains(@href, 'start=')]",
+                    "//td[last()]//a"
                 ]
                 
-                for pattern in phone_patterns:
-                    matches = re.findall(pattern, full_text)
-                    if matches:
-                        phone = matches[0]
-                        break
-            except:
-                pass
-            
-            # Extract rating if available
-            rating = "Not rated"
-            try:
-                rating_elements = business.find_elements(By.XPATH, ".//span[contains(@class, 'rating')] | .//div[contains(@class, 'rating')]")
-                if rating_elements:
-                    rating = rating_elements[0].text.strip()
-            except:
-                pass
-            
-            # Extract website if available
-            website = "Not available"
-            try:
-                website_elements = business.find_elements(By.XPATH, ".//a[contains(@href, 'http')]")
-                if website_elements:
-                    for element in website_elements:
-                        href = element.get_attribute('href')
-                        if href and ('google.com' not in href and 'maps.google.com' not in href):
-                            website = href
+                next_button = None
+                for selector in next_button_selectors:
+                    try:
+                        next_button = driver.find_element(By.XPATH, selector)
+                        if next_button:
+                            print(f"Found next button using selector: {selector}")
                             break
-            except:
-                pass
-            
-            construction_firms.append({
-                'Name': name,
-                'Address': address,
-                'Phone': phone,
-                'Rating': rating,
-                'Website': website
-            })
-            
-            print(f"Processed business {i+1}: {name}")
-            
-        except Exception as e:
-            print(f"Error processing business {i+1}: {str(e)}")
-            continue
+                    except:
+                        continue
+                
+                if next_button:
+                    # Scroll to the next button to make it clickable
+                    driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", next_button)
+                    time.sleep(1)
+                    
+                    # Click the next button
+                    next_button.click()
+                    print("Clicked next page button")
+                    
+                    # Wait for the next page to load
+                    time.sleep(5)
+                    
+                    # Additional wait for specific elements to ensure page loaded
+                    try:
+                        WebDriverWait(driver, 10).until(
+                            EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'rllt__details') or contains(@class, 'VkpGBb')]"))
+                        )
+                    except:
+                        print("Timeout waiting for page to load, but continuing...")
+                    
+                    current_page += 1
+                else:
+                    print("Could not find next page button. Stopping pagination.")
+                    break
+                    
+            except Exception as e:
+                print(f"Error navigating to next page: {str(e)}")
+                break
+        else:
+            break
 
     # Save to Excel
     if construction_firms:
         df = pd.DataFrame(construction_firms)
         df.to_excel('construction_firms_gauteng.xlsx', index=False)
-        print(f"✅ {len(construction_firms)} construction saved to construction_firms_gauteng.xlsx")
+        print(f"✅ {len(construction_firms)} construction firms saved to construction_firms_gauteng.xlsx")
         
         # Also save as CSV for easier viewing
         df.to_csv('construction_firms_gauteng.csv', index=False)

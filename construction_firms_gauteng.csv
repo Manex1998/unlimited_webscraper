@@ -1,23 +1,221 @@
-Name,Address,Phone,Rating,Website
-Unknown,Not available,011 482 2592,Not rated,Not available
-Unknown,Not available,062 330 3969,Not rated,Not available
-Unknown,Not available,011 789 8440,Not rated,Not available
-Unknown,Not available,011 463 1962,Not rated,Not available
-Unknown,Not available,011 430 7700,Not rated,Not available
-Unknown,Not available,011 608 0313,Not rated,Not available
-Unknown,Not available,011 803 7000,Not rated,Not available
-Unknown,Not available,072 489 6107,Not rated,Not available
-Unknown,Not available,011 793 3619,Not rated,Not available
-Unknown,Not available,071 467 6453,Not rated,Not available
-Unknown,Not available,011 451 8000,Not rated,Not available
-Unknown,Not available,011 493 3300,Not rated,Not available
-Unknown,Not available,011 463 2124,Not rated,Not available
-Unknown,Not available,011 465 0809,Not rated,Not available
-Unknown,Not available,010 541 0035,Not rated,Not available
-Unknown,Not available,067 380 7786,Not rated,Not available
-Unknown,Not available,011 524 7000,Not rated,Not available
-Unknown,Not available,011 907 9410,Not rated,Not available
-Unknown,Not available,011 682 3862,Not rated,Not available
-Unknown,Not available,010 880 5283,Not rated,Not available
-Unknown,Not available,083 423 7585,Not rated,Not available
-Unknown,Not available,081 779 4840,Not rated,Not available
+Name,Address,Phone,Rating,Website,Page
+Unknown,Not available,011 676 6879,Not rated,Not available,1
+Unknown,Not available,083 938 6602,Not rated,Not available,1
+Unknown,Not available,072 186 7040,Not rated,Not available,1
+Unknown,Not available,011 210 8600,Not rated,Not available,1
+Unknown,Not available,011 432 4267,Not rated,Not available,1
+Unknown,Not available,010 591 4671,Not rated,Not available,1
+Unknown,Not available,082 440 8398,Not rated,Not available,1
+Unknown,Not available,074 703 9034,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,082 806 1735,Not rated,Not available,1
+Unknown,Not available,011 867 3475,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,010 500 0400,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,012 997 1939,Not rated,Not available,1
+Unknown,Not available,082 333 3410,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,012 807 1064,Not rated,Not available,1
+Unknown,Not available,011 464 7004,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,Not available,Not rated,Not available,1
+Unknown,Not available,011 875 0401,Not rated,Not available,1
+Unknown,Not available,083 938 6602,Not rated,Not available,2
+Unknown,Not available,010 010 8719,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,076 580 7891,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,087 075 1044,Not rated,Not available,2
+Unknown,Not available,073 394 1525,Not rated,Not available,2
+Unknown,Not available,011 467 1480,Not rated,Not available,2
+Unknown,Not available,082 786 1114,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,063 514 6983,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,010 447 3656,Not rated,Not available,2
+Unknown,Not available,083 655 5539,Not rated,Not available,2
+Unknown,Not available,011 875 0401,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,010 880 3999,Not rated,Not available,2
+Unknown,Not available,011 789 4448,Not rated,Not available,2
+Unknown,Not available,Not available,Not rated,Not available,2
+Unknown,Not available,011 036 9911,Not rated,Not available,2
+Unknown,Not available,011 676 6879,Not rated,Not available,3
+Unknown,Not available,083 938 6602,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,011 886 8070,Not rated,Not available,3
+Unknown,Not available,011 465 1187,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,011 784 2772,Not rated,Not available,3
+Unknown,Not available,087 802 9006,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,086 155 2277,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,011 705 3247,Not rated,Not available,3
+Unknown,Not available,082 803 9675,Not rated,Not available,3
+Unknown,Not available,011 450 2818,Not rated,Not available,3
+Unknown,Not available,Not available,Not rated,Not available,3
+Unknown,Not available,011 521 8000,Not rated,Not available,3
+Unknown,Not available,011 788 0688,Not rated,Not available,3
+Unknown,Not available,011 463 1737,Not rated,Not available,3
+Unknown,Not available,011 447 1220,Not rated,Not available,3
+Unknown,Not available,011 676 6879,Not rated,Not available,4
+Unknown,Not available,082 806 1769,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,087 802 9006,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,011 706 8238,Not rated,Not available,4
+Unknown,Not available,010 447 3656,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,011 784 0165,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,082 380 8382,Not rated,Not available,4
+Unknown,Not available,083 302 9465,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,Not available,Not rated,Not available,4
+Unknown,Not available,010 065 5443,Not rated,Not available,4
+Unknown,Not available,011 789 4448,Not rated,Not available,4
+Unknown,Real Estate Services South Africa Sandton Randburg Lance Ferreira,072 488 1925,Not rated,Not available,4
+Unknown,Not available,086 155 2277,Not rated,Not available,4
+Unknown,Not available,083 938 6602,Not rated,Not available,5
+Unknown,Not available,010 010 8719,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,011 521 8000,Not rated,Not available,5
+Unknown,Not available,011 450 2818,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,011 234 6111,Not rated,Not available,5
+Unknown,Not available,011 867 3049,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,011 463 1737,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,012 330 0642,Not rated,Not available,5
+Unknown,Not available,010 020 4921,Not rated,Not available,5
+Unknown,Not available,060 079 7329,Not rated,Not available,5
+Unknown,Not available,082 564 9969,Not rated,Not available,5
+Unknown,Not available,011 056 8196,Not rated,Not available,5
+Unknown,Not available,Not available,Not rated,Not available,5
+Unknown,Not available,082 926 1455,Not rated,Not available,5
+Unknown,Not available,067 929 6213,Not rated,Not available,5
+Unknown,Not available,083 938 6602,Not rated,Not available,6
+Unknown,Not available,010 010 8719,Not rated,Not available,6
+Unknown,Not available,083 307 7788,Not rated,Not available,6
+Unknown,Not available,011 465 8405,Not rated,Not available,6
+Unknown,Not available,011 867 3049,Not rated,Not available,6
+Unknown,Not available,011 462 3360,Not rated,Not available,6
+Unknown,Not available,011 447 1220,Not rated,Not available,6
+Unknown,Not available,Not available,Not rated,Not available,6
+Unknown,Not available,010 035 3360,Not rated,Not available,6
+Unknown,Not available,011 788 0688,Not rated,Not available,6
+Unknown,Not available,064 369 9616,Not rated,Not available,6
+Unknown,Not available,Not available,Not rated,Not available,6
+Unknown,Not available,010 023 2764,Not rated,Not available,6
+Unknown,Not available,Not available,Not rated,Not available,6
+Unknown,Not available,076 579 8988,Not rated,Not available,6
+Unknown,Not available,011 463 2960,Not rated,Not available,6
+Unknown,Not available,082 800 2082,Not rated,Not available,6
+Unknown,Not available,061 470 5531,Not rated,Not available,6
+Unknown,Not available,Not available,Not rated,Not available,6
+Unknown,Not available,Not available,Not rated,Not available,6
+Unknown,Not available,012 348 3501,Not rated,Not available,6
+Unknown,Not available,010 001 2811,Not rated,Not available,6
+Unknown,Not available,011 676 6879,Not rated,Not available,7
+Unknown,Not available,083 938 6602,Not rated,Not available,7
+Unknown,Not available,011 463 0155,Not rated,Not available,7
+Unknown,Not available,011 327 4062,Not rated,Not available,7
+Unknown,Not available,082 331 4760,Not rated,Not available,7
+Unknown,Not available,011 465 1119,Not rated,Not available,7
+Unknown,Not available,011 052 2861,Not rated,Not available,7
+Unknown,Not available,011 706 1315,Not rated,Not available,7
+Unknown,Not available,Not available,Not rated,Not available,7
+Unknown,Not available,011 460 1599,Not rated,Not available,7
+Unknown,Not available,078 158 9287,Not rated,Not available,7
+Unknown,Not available,011 510 9999,Not rated,Not available,7
+Unknown,Not available,010 020 2851,Not rated,Not available,7
+Unknown,Not available,Not available,Not rated,Not available,7
+Unknown,Not available,079 860 4401,Not rated,Not available,7
+Unknown,Not available,010 443 9932,Not rated,Not available,7
+Unknown,Not available,083 630 5703,Not rated,Not available,7
+Unknown,Not available,011 902 4305,Not rated,Not available,7
+Unknown,Not available,Not available,Not rated,Not available,7
+Unknown,Not available,011 467 7870,Not rated,Not available,7
+Unknown,Not available,Not available,Not rated,Not available,7
+Unknown,Not available,082 451 3111,Not rated,Not available,7
+Unknown,Not available,011 676 6879,Not rated,Not available,8
+Unknown,Not available,083 938 6602,Not rated,Not available,8
+Unknown,Not available,072 719 5979,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,082 445 8341,Not rated,Not available,8
+Unknown,Not available,082 572 7609,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,010 010 8719,Not rated,Not available,8
+Unknown,Not available,010 216 9376,Not rated,Not available,8
+Unknown,Not available,083 236 6300,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,060 317 5235,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,011 902 7171,Not rated,Not available,8
+Unknown,Not available,082 567 0735,Not rated,Not available,8
+Unknown,Not available,011 789 2815,Not rated,Not available,8
+Unknown,Not available,011 886 8070,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,012 947 2624,Not rated,Not available,8
+Unknown,Not available,Not available,Not rated,Not available,8
+Unknown,Not available,011 432 3232,Not rated,Not available,8
+Unknown,Not available,083 267 2617,Not rated,Not available,8
+Unknown,Not available,011 676 6879,Not rated,Not available,9
+Unknown,Not available,083 938 6602,Not rated,Not available,9
+Unknown,Not available,076 850 0192,Not rated,Not available,9
+Unknown,Not available,Not available,Not rated,Not available,9
+Unknown,Not available,010 824 7275,Not rated,Not available,9
+Unknown,Not available,072 146 7566,Not rated,Not available,9
+Unknown,Not available,010 823 4000,Not rated,Not available,9
+Unknown,Not available,064 532 1515,Not rated,Not available,9
+Unknown,Not available,011 463 3199,Not rated,Not available,9
+Unknown,Not available,011 462 7740,Not rated,Not available,9
+Unknown,Not available,011 465 3215,Not rated,Not available,9
+Unknown,Not available,011 463 6161,Not rated,Not available,9
+Unknown,Not available,060 389 6463,Not rated,Not available,9
+Unknown,Not available,Not available,Not rated,Not available,9
+Unknown,Not available,011 776 4658,Not rated,Not available,9
+Unknown,Not available,Not available,Not rated,Not available,9
+Unknown,Not available,010 025 0737,Not rated,Not available,9
+Unknown,Not available,012 846 3030,Not rated,Not available,9
+Unknown,Not available,011 907 3666,Not rated,Not available,9
+Unknown,Not available,011 864 5050,Not rated,Not available,9
+Unknown,Not available,010 753 2080,Not rated,Not available,9
+Unknown,Not available,081 542 3784,Not rated,Not available,9
+Unknown,Not available,083 938 6602,Not rated,Not available,10
+Unknown,Not available,082 806 1769,Not rated,Not available,10
+Unknown,Not available,011 432 0303,Not rated,Not available,10
+Unknown,Not available,060 084 4441,Not rated,Not available,10
+Unknown,Not available,011 907 5665,Not rated,Not available,10
+Unknown,Not available,011 435 2840,Not rated,Not available,10
+Unknown,Not available,073 148 7626,Not rated,Not available,10
+Unknown,Not available,Not available,Not rated,Not available,10
+Unknown,Not available,063 781 8923,Not rated,Not available,10
+Unknown,Not available,082 550 2924,Not rated,Not available,10
+Unknown,Not available,011 465 6769,Not rated,Not available,10
+Unknown,Not available,011 467 3233,Not rated,Not available,10
+Unknown,Not available,011 869 1713,Not rated,Not available,10
+Unknown,Not available,061 710 6226,Not rated,Not available,10
+Unknown,Not available,011 467 4119,Not rated,Not available,10
+Unknown,Not available,011 432 0303,Not rated,Not available,10
+Unknown,Not available,011 793 2685,Not rated,Not available,10
+Unknown,Not available,011 052 2861,Not rated,Not available,10
+Unknown,Not available,083 250 3434,Not rated,Not available,10
+Unknown,Not available,010 510 1199,Not rated,Not available,10
+Unknown,Not available,082 371 3401,Not rated,Not available,10
+Unknown,Not available,087 701 4727,Not rated,Not available,10
