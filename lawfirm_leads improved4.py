@@ -24,7 +24,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 try:
     # Open Google search URL
-    url = "https://www.google.com/search?tbm=lcl&q=estates+in+gauteng"
+    url = "https://www.google.com/search?tbm=lcl&q=funeral+parlor+cafes+in+gauteng"
     print("Navigating to Google search...")
     driver.get(url)
 
@@ -40,7 +40,7 @@ try:
     except:
         print("No cookie consent button found")
     
-    construction_firms = []
+    doctors = []
     max_pages = 10  # Number of pages to scrape
     current_page = 1
     
@@ -154,7 +154,7 @@ try:
                 except:
                     pass
                 
-                construction_firms.append({
+                doctors.append({
                     'Name': name,
                     'Address': address,
                     'Phone': phone,
@@ -224,13 +224,13 @@ try:
             break
 
     # Save to Excel
-    if construction_firms:
-        df = pd.DataFrame(construction_firms)
-        df.to_excel('construction_firms_gauteng.xlsx', index=False)
-        print(f"✅ {len(construction_firms)} construction firms saved to construction_firms_gauteng.xlsx")
+    if doctors:
+        df = pd.DataFrame(doctors)
+        df.to_excel('funeralparlor_gauteng.xlsx', index=False)
+        print(f"✅ {len(doctors)} construction firms saved to construction_firms_gauteng.xlsx")
         
         # Also save as CSV for easier viewing
-        df.to_csv('construction_firms_gauteng.csv', index=False)
+        df.to_csv('funeralparlor_firms_gauteng.csv', index=False)
         print(f"✅ CSV version saved as construction_firms_gauteng.csv")
     else:
         print("❌ No construction firms found. The page structure might have changed significantly.")
